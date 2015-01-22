@@ -1,0 +1,36 @@
+<div ng-controller="ExampleController">
+  <form name="form" class="css-form" novalidate>
+    Name:
+    <input type="text" ng-model="user.name" name="uName" required="" />
+    <br />
+    <div ng-show="form.$submitted || form.uName.$touched">
+      <div ng-show="form.uName.$error.required">Tell us your name.</div>
+    </div>
+
+    E-mail:
+    <input type="email" ng-model="user.email" name="uEmail" required="" />
+    <br />
+    <div ng-show="form.$submitted || form.uEmail.$touched">
+      <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+      <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+    </div>
+
+ 
+
+
+    <input type="button" ng-click="reset(form)" value="Reset" />
+    <input type="submit" ng-click="update(user)" value="Save" />
+  </form>
+</div>
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Left</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Middle</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Right</button>
+  </div>
+</div>

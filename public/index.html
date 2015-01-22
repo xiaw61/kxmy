@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" >
+    <head>
+        <title>鄂温克旗科兴马业发展有限公司!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link href="./css/home.css" rel="stylesheet">
+        <link rel="icon" href="./images/fav.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="./libs/angular/angular.js"></script>
+        <script src="./libs/angular-route/angular-route.js"></script>
+        <script src="./libs/ng-file-upload/angular-file-upload-shim.min.js"></script>
+        <script src="./libs/ng-file-upload-shim/angular-file-upload.min.js"></script>
+        <script src="js/controllrts/app.js"></script>
+        <script src="js/controllrts/controllers.js"></script>
+
+ <!--        <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+        .en-markup-crop-options {
+        top: 18px !important;
+        left: 50% !important;
+        margin-left: -100px !important;
+        width: 200px !important;
+        border: 2px rgba(255,255,255,.38) solid !important;
+        border-radius: 4px !important;
+        }
+        .en-markup-crop-options div div:first-of-type {
+        margin-left: 0px !important;
+        }
+        </style> -->
+
+        <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+        width: 70%;
+        margin: auto;
+        }
+        </style>
+        
+    </head>
+    <body  ng-app="kexingApp">
+        <nav class="navbar navbar-inverse navbar-fixed-top" >
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">科兴马业欢迎您!</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#/home">首页</a></li>
+                        <li><a href="#/intro">简介</a></li>
+                        <li><a href="#/display">马匹展示</a></li>
+                        <li><a href="#/contact">联系方式</a></li>
+                        
+                     <!--    <li><a href="#/admin">管理</a></li>
+                        <li><a href="#/login">登入</a></li> -->
+                    </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+            
+           
+            <div ng-view></div>
+            
+            <div id = "foot"  style=" text-align: center;" >
+                Copyright 1996-2014 xiaw, All Rights Reserved
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--             // <script src="../../dist/js/bootstrap.min.js"></script>
+            // <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+            
+        </body>
+    </html>

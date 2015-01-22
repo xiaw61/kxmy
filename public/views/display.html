@@ -1,0 +1,57 @@
+<div ng-controller="DemoController">
+<h2 class="text-center">现有马匹</h2>
+ <!--    <div>
+        
+        <select ng-model="correctlySelected"
+            ng-options="opt as opt.label for opt in options">
+        </select>
+        The value selected is {{ correctlySelected.value }}.
+    </div> -->
+    <div ng-controller="HorsesListCtrl">
+        <ul class="thumbnails">
+            <li  ng-repeat="house in houses |filter: correctlySelected.value">
+                <div class="thumbnail">
+                    <table class="table table-bordered table-hover table-condensed table-responsive"  >
+                        <tr >
+                            <th class="text-center col-md-1">
+                                <img ng-src="{{house.path}}" style="width:304px;height:228px" >
+                            </th>
+                            <td >
+                                <table class="table table-responsive .table-condensed text-center" >
+                                    <tr>
+                                        <td>编号</td>
+                                        <td>{{house.id}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>年龄</td>
+                                        <td>{{house.age}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>品种</td>
+                                        <td>{{house.pinzong}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>性别</td>
+                                        <td>{{house.xingbie}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>颜色</td>
+                                        <td>{{house.yanse}}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    <!--
+                    <img ng-src="{{house.path}}" style="width:304px;height:228px" >
+                    <div class="caption text-center">
+                        <h5>{{house.id}}</h5>
+                        <p>{{house.pinzong}}</p>
+                        -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>

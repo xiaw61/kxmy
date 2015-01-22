@@ -1,0 +1,79 @@
+
+<script src="./libs/angular/angular.min.js"></script>
+<script src="./libs/ng-file-upload/angular-file-upload-shim.min.js"></script>
+<script src="./libs/ng-file-upload-shim/angular-file-upload.min.js"></script>
+
+<div ng-controller="UpLoadctrl"  class="form-group">
+
+<form name="myForm" class="form-horizontal" >
+  <fieldset ><legend>Upload on form submit</legend>
+
+  <div class="form-group">
+     <label for="exampleInputName2" class="col-sm-2 control-label">编号</label>
+    
+      <div class="col-sm-10">
+      <input  type="text" class="form-control" id="exampleInputName2" name="userName" ng-model="id" placeholder="123456" required=""> 
+       <i ng-show="myForm.userName.$error.required">*必须填写</i><br>
+      </div>
+  </div>
+
+   <div class="form-group">
+     <label for="exampleInputName3" class="col-sm-2 control-label">年龄</label>
+    
+      <div class="col-sm-10">
+      <input  type="text" class="form-control" id="exampleInputName3" name="userName" ng-model="age" placeholder="123456" required=""> 
+       <i ng-show="myForm.userName.$error.required">*必须填写</i><br>
+      </div>
+  </div>
+
+   <div class="form-group">
+     <label for="exampleInputName4" class="col-sm-2 control-label">品种</label>
+    
+      <div class="col-sm-10">
+      <input  type="text" class="form-control" id="exampleInputName4" name="userName" ng-model="pinzong" placeholder="123456" required=""> 
+       <i ng-show="myForm.userName.$error.required">*必须填写</i><br>
+      </div>
+  </div>
+
+   <div class="form-group">
+     <label for="exampleInputName5" class="col-sm-2 control-label">性别</label>
+    
+      <div class="col-sm-10">
+      <input  type="text" class="form-control" id="exampleInputName5" name="userName" ng-model="xingbie" placeholder="123456" required=""> 
+       <i ng-show="myForm.userName.$error.required">*必须填写</i><br>
+      </div>
+  </div>
+
+  <div class="form-group">
+     <label for="exampleInputName6" class="col-sm-2 control-label">颜色</label>
+    
+      <div class="col-sm-10">
+      <input  type="text" class="form-control" id="exampleInputName6" name="userName" ng-model="yanse" placeholder="123456" required=""> 
+       <i ng-show="myForm.userName.$error.required">*必须填写</i><br>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="exampleInputFile" class="col-sm-2 control-label">File input</label>
+
+      <input type="file"  id="exampleInputFile" ng-file-select="" ng-model="picFile" name="file" accept="image/*" ng-file-change="generateThumb(picFile, $files)" required="">
+    <i ng-show="myForm.file.$error.required">*required</i>
+
+
+
+  <div class="form-group">
+          
+    <button  class="btn btn-default col-sm-4" ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">Submit</button>
+  </div>
+
+
+    <img ng-show="picFile[0].dataUrl != null" ng-src="{{picFile[0].dataUrl}}" class="thumb">
+    <span class="progress" ng-show="picFile[0].progress >= 0">    
+      <div style="width:{{picFile[0].progress}}%" ng-bind="picFile[0].progress + '%'" class="ng-binding"></div>
+    </span> 
+    <span ng-show="picFile[0].result">Upload Successful</span>
+  </fieldset>
+  <br>
+</form>
+
+</div>
