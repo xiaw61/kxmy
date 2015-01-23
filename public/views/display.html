@@ -7,16 +7,16 @@
         </select>
         The value selected is {{ correctlySelected.value }}.
     </div> -->
-    <div ng-controller="HorsesListCtrl">
-        <ul class="thumbnails">
-            <li  ng-repeat="house in houses |filter: correctlySelected.value">
-                <div class="thumbnail">
+    <div ng-controller="HorsesListCtrl" class="row">
+        <ul class="thumbnails col-md-10 col-xs-10">
+            <li  ng-repeat="house in houses |filter: correctlySelected.value" style="list-style-type:none">
+                <div >
                     <table class="table table-bordered table-hover table-condensed table-responsive"  >
                         <tr >
-                            <th class="text-center col-md-1">
+                            <th class="text-center col-md-1 col-xs-1">
                                 <img ng-src="{{house.path}}" style="width:304px;height:228px" >
                             </th>
-                            <td >
+                            <td class="text-center col-md-6 col-xs-6">
                                 <table class="table table-responsive .table-condensed text-center" >
                                     <tr>
                                         <td>编号</td>
