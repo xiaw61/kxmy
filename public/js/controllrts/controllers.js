@@ -83,12 +83,12 @@ kexingAppControllers.controller('UpLoadctrl', [ '$scope', '$http', '$timeout', '
 	$scope.onFileSelect = function($file) {
     	
       var data = {
-        id:$scope.id,
-        age:$scope.age,
         pinzong:$scope.pinzong,
-        xingbie:$scope.xingbie,
-        yanse:$scope.yanse,
-
+        chandi:$scope.chandi,
+        maose:$scope.maose,
+        riqi:$scope.riqi,
+        mingzi:$scope.mingzi,
+        jianjie:$scope.jianjie
       }
 
       var file = $file;

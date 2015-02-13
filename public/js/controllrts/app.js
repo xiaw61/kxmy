@@ -18,7 +18,7 @@ kexingApp.config(['$routeProvider',
  
       }).
       when('/display', {
-        templateUrl: '../views/display.html'
+        templateUrl: '../views/display2.html'
  
       }).
       when('/login', {
@@ -27,6 +27,10 @@ kexingApp.config(['$routeProvider',
       }).
        when('/admin', {
         templateUrl: '../views/save.html'
+ 
+      }).
+        when('/display2', {
+        templateUrl: '../views/display2.html'
  
       }).
       otherwise({

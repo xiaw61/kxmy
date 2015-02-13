@@ -1,6 +1,6 @@
 <div ng-controller="DemoController">
-<h2 class="text-center">现有马匹</h2>
- <!--    <div>
+    <h2 class="text-center">现有马匹</h2>
+    <!--    <div>
         
         <select ng-model="correctlySelected"
             ng-options="opt as opt.label for opt in options">
@@ -8,50 +8,49 @@
         The value selected is {{ correctlySelected.value }}.
     </div> -->
     <div ng-controller="HorsesListCtrl" class="row">
-        <ul class="thumbnails col-md-10 col-xs-10">
+        <ul class="thumbnails col-md-10 col-xs-10 ">
             <li  ng-repeat="house in houses |filter: correctlySelected.value" style="list-style-type:none">
                 <div >
                     <table class="table table-bordered table-hover table-condensed table-responsive"  >
                         <tr >
-                            <th class="text-center col-md-1 col-xs-1">
-                                <img ng-src="{{house.path}}" style="width:304px;height:228px" >
+                            <th class="img-responsive col-md-1 col-xs-1">
+                                <img class="thumbnails" ng-src="{{house.path}}" style="width:194px;height:321px" >
                             </th>
                             <td class="text-center col-md-6 col-xs-6">
                                 <table class="table table-responsive .table-condensed text-center" >
-                                    <tr>
-                                        <td>编号</td>
-                                        <td>{{house.id}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>年龄</td>
-                                        <td>{{house.age}}</td>
-                                    </tr>
                                     <tr>
                                         <td>品种</td>
                                         <td>{{house.pinzong}}</td>
                                     </tr>
                                     <tr>
-                                        <td>性别</td>
-                                        <td>{{house.xingbie}}</td>
+                                        <td>产地</td>
+                                        <td>{{house.chandi}}</td>
                                     </tr>
                                     <tr>
-                                        <td>颜色</td>
-                                        <td>{{house.yanse}}</td>
+                                        <td>毛色</td>
+                                        <td>{{house.maose}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>出生日期</td>
+                                        <td>{{house.riqi}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>名字</td>
+                                        <td>{{house.mingzi}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>简介</td>
+                                        <td>{{house.jianjie}}</td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         
                     </table>
-                    <!--
-                    <img ng-src="{{house.path}}" style="width:304px;height:228px" >
-                    <div class="caption text-center">
-                        <h5>{{house.id}}</h5>
-                        <p>{{house.pinzong}}</p>
-                        -->
-                    </div>
-                </li>
-            </ul>
-        </div>
-        
+                    
+                </div>
+            </li>
+        </ul>
     </div>
+    
+</div>

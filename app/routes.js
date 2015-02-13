@@ -37,13 +37,13 @@ var fs = require('fs');
                 var Path ="images/"+ req.files.file.path.split("/")[2];
                 //console.log(data);
                 record["path"] = Path;
-                console.log(record);
+                //console.log(record);
                 fs.writeFile(newPath, data, function (err) {
                     //console.log(err)
                 });
 
                 Houses.insert(record, function (err, newDoc) {   // Callback is optional
-                console.log(record);
+                //console.log(record);
                 });
             });
              

@@ -1,0 +1,89 @@
+<div class="container">
+	<!-- Page Heading -->
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">现有马匹
+			<!-- <small>Secondary Text</small>
+ -->			</h1>
+		</div>
+	</div>
+	<!-- /.row -->
+	<!-- Project One -->
+	<div ng-controller="HorsesListCtrl" class="row">
+		<li class="row" ng-repeat="house in houses |filter: correctlySelected.value" style="list-style-type:none">
+			<div class="col-md-4">
+				<a href="#">
+					<img class="img-responsive" src="{{house.path}}" style="width:300px;height:340px">
+				</a>
+							<hr>
+
+			</div>
+			<div class="col-md-5">
+				<table class="table table-responsive .table-condensed text-center" >
+                                    <tr>
+                                        <td style = "width:116px">品种</td>
+                                        <td>{{house.pinzong}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>产地</td>
+                                        <td>{{house.chandi}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>毛色</td>
+                                        <td>{{house.maose}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>出生日期</td>
+                                        <td>{{house.riqi}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>名字</td>
+                                        <td>{{house.mingzi}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>简介</td>
+                                        <td>{{house.jianjie}}</td>
+                                    </tr>
+                                </table>
+	<!-- 			<a class="btn btn-primary" href="http://baike.baidu.com/view/33942.htm">百度百科 <span class="glyphicon glyphicon-chevron-right"></span></a> -->
+				
+
+			</div>
+			
+	
+		</li>
+	</div>
+	<!-- /.row -->
+	
+	<!-- Pagination -->
+	<!-- <div class="row text-center">
+		<div class="col-lg-12">
+			<ul class="pagination">
+				<li>
+					<a href="#">&laquo;</a>
+				</li>
+				<li class="active">
+					<a href="#">1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+				<li>
+					<a href="#">4</a>
+				</li>
+				<li>
+					<a href="#">5</a>
+				</li>
+				<li>
+					<a href="#">&raquo;</a>
+				</li>
+			</ul>
+		</div>
+	</div> -->
+	<!-- /.row -->
+	<hr>
+</div>
+<!-- /.container
